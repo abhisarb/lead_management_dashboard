@@ -11,6 +11,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// Root Route
+app.get('/', (req, res) => {
+    res.send('Lead Management API is running...');
+});
+
 // Routes
 app.use('/api/leads', leadRoutes);
 
