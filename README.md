@@ -1,68 +1,74 @@
 # LeadFlow - Mini CRM Dashboard
 
-A modern, full-stack Lead Management Dashboard built with React, Node.js, and MongoDB.
+Build a mini CRM-style dashboard using a full-stack approach (React, Node.js, and MongoDB) for a Lead Management assignment.
 
-## Features
-- **Analytics Dashboard**: View key metrics like total leads, conversion rates, and lead sources.
-- **Leads Management**: Interactive table with server-side pagination, search, and status filtering.
-- **Lead Details**: Detailed view of individual leads with contact info and notes.
-- **Responsive Design**: Premium UI that works on both desktop and mobile devices.
-- **Mock Authentication**: Secure login screen (Admin demo credentials included).
+## 🚀 Live Links
+- **Frontend (Live App)**: [https://lead-management-dashboard-smoky.vercel.app](https://lead-management-dashboard-smoky.vercel.app)
+- **Backend API**: [https://lead-management-backend-a1k7.onrender.com](https://lead-management-backend-a1k7.onrender.com)
+- **GitHub Repository**: [https://github.com/abhisarb/lead_management_dashboard](https://github.com/abhisarb/lead_management_dashboard)
 
-## Tech Stack
-- **Frontend**: React (Vite), Recharts, Lucide-React, Axios.
-- **Backend**: Node.js, Express, Mongoose.
-- **Database**: MongoDB (Atlas).
-- **Styling**: Vanilla CSS (Modern design systems).
-
-## Setup Instructions
-
-### 1. Prerequisites
-- Node.js installed
-- MongoDB Atlas account (Free tier)
-
-### 2. Backend Setup
-1. Navigate to the `backend` folder:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file based on `.env.example` and add your `MONGODB_URI`.
-4. Run the seeding script to generate 500 dummy leads:
-   ```bash
-   npm run seed
-   ```
-5. Start the server:
-   ```bash
-   npm start
-   ```
-
-### 3. Frontend Setup
-1. Navigate to the `frontend` folder:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-## Demo Credentials
+## 🔑 Demo Credentials
 - **Email**: `admin@crm.com`
 - **Password**: `admin123`
 
-## Environment Variables
-- `MONGODB_URI`: Your MongoDB connection string.
-- `PORT`: Server port (default: 5000).
+---
 
-## Deployment
-- **Backend**: Can be deployed to Render, Railway, or Heroku.
-- **Frontend**: Can be deployed to Vercel or Netlify.
-- **Database**: Use MongoDB Atlas free tier.
+## 📖 Features
+- **Analytics Dashboard**: Real-time metrics including Total Leads, Converted Leads, Pipeline Value, and Conversion Rate.
+- **Leads Management**: 
+  - Server-side **Search** (Full Name & Email).
+  - Server-side **Filtering** (By Lead Status).
+  - Server-side **Pagination**.
+  - Server-side **Sorting** (By Created Date).
+- **Lead Details**: Detailed profile view for each lead with contact info, source, value, and internal notes.
+- **Mobile Responsive**: Built with a premium, responsive Vanilla CSS design system.
+- **Authentication**: Basic mock authentication for secure access.
+
+---
+
+## 🛠️ Technology Stack
+- **Frontend**: React (Vite), Recharts (Analytics), Lucide-React (Icons), Axios.
+- **Backend**: Node.js, Express.js, Mongoose.
+- **Database**: MongoDB Atlas (Free Tier).
+- **Styling**: Vanilla CSS (Modern design patterns, glassmorphism, fluid animations).
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend (`/backend/.env`)
+```env
+MONGODB_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+### Frontend (`/frontend/.env` or Vercel Settings)
+```env
+VITE_API_URL=https://your-backend-url.onrender.com/api
+```
+
+---
+
+## 🏗️ Local Setup Instructions
+
+### 1. Backend Setup
+1. Navigate to the `backend` folder: `cd backend`
+2. Install dependencies: `npm install`
+3. Create a `.env` file and add your `MONGODB_URI`.
+4. **Seeding Method**: Generate 500 dummy leads by running:
+   ```bash
+   npm run seed
+   ```
+5. Start the server: `npm start`
+
+### 2. Frontend Setup
+1. Navigate to the `frontend` folder: `cd frontend`
+2. Install dependencies: `npm install`
+3. Start the Vite development server: `npm run dev`
+
+---
+
+## ☁️ Deployment Details
+- **Frontend**: Deployed on **Vercel** with the `VITE_API_URL` environment variable pointing to the Render backend.
+- **Backend**: Deployed on **Render** as a Web Service.
+- **Database**: Hosted on **MongoDB Atlas** with IP 0.0.0.0/0 whitelisted.
